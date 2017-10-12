@@ -1,0 +1,80 @@
+<div id="login">
+	<div class="panel col-md-6 col-md-offset-3 col-xs-12 login">
+	<h1 class="panel-heading">
+		EMP—admin
+	</h1>
+	<div class="panel-body">
+    <!--<form class="form-horizontal" role="form" name="loginForm">
+		  <div class="form-group">
+		    <label for="user" class="col-sm-2 control-label">用户名</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="user" placeholder="请输入用户名" name="user"/>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="lastname" class="col-sm-2 control-label">密码</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="password" placeholder="请输入密码" name="password"/>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-xs-offset-2 col-sm-10">
+		      <div class="checkbox">
+		        <label>
+		          <input type="checkbox">请记住我
+		        </label>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-xs-offset-3 col-xs-3">
+		      <button type="submit" class="btn btn-success">登录</button>
+		    </div>
+		    <div class="col-xs-3">
+		      <button type="submit" class="btn btn-danger">忘记密码</button>
+		    </div>
+		  </div>
+		</form>-->
+		<form class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <label for="user" class="col-sm-2 control-label">用户名:</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="user" placeholder="请输入用户名">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="pass" class="col-sm-2 control-label">密码:</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="pass" placeholder="请输入密码">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <div class="checkbox">
+		        <label>
+		          <input type="checkbox">请记住我
+		        </label>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-xs-offset-3 col-xs-3">
+		      <button type="submit" class="btn btn-success">登录</button>
+		    </div>
+		    <div class="col-xs-3">
+		      <button type="submit" class="btn btn-danger">忘记密码</button>
+		    </div>
+		  </div>
+		</form>
+  </div>
+</div>
+</div>
+
+
+	<!--ngModel 绑定的变量名和模板变量不能重名-->
+	<!--{{stu.name}}  <br>
+	valid 验证是否通过 true表示验证通过:{{stu.valid}}   ---{{stu.invalid}}<br>
+	dirty input中的值是否发生过变化 true 表示发生变化了:{{stu.dirty}} -- {{stu.pristine}}<br>
+	touch input表示是否触发   true例如光标移出:  {{stu.touched}}--{{stu.untouched}}-->
+	
+	<!--<div [hidden]="stu.valid || stu.pristine" class="alert alert-danger">用户名不能为空</div>
+	<div [hidden]="!stu.pristine" class="alert alert-info">请输入用户名</div>-->

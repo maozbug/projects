@@ -1,0 +1,41 @@
+img{
+	height: 16px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.leftCon .headerToggle{
+	padding: 10px;
+}
+.leftCon .headerToggle a div{
+	color: #FFFFFF;
+}
+.leftCon .panel-body ul li>span{
+	color: white;
+}
+.panel-body{
+	padding: 0;
+}
+.panel-body ul{
+	padding-left: 10%;
+}
+.panel-body ul li{
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.panel-body ul li img{
+	margin-right: 10%;
+}
+.leftCon .headerToggle a .stnav{
+	display: flex;
+	flex-direction: row;
+}
+.stnav .lef,.stnav .rig{
+	flex: 1;
+}
+.stnav .cen{
+	flex: 5;
+}

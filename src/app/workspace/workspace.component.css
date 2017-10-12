@@ -1,0 +1,24 @@
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background:#282828 ;
+}
+.left-nav{
+	position: fixed;
+	top: 60px;
+	right: 80%;
+	left: 0;
+	bottom: 0;
+	border-right: 1px solid #414141;;
+	background: #282828;
+}
+.content{
+	position: fixed;
+	top: 60px;
+	right: 0;
+	left: 20%;
+	bottom: 0;
+	background:#FFFFFF ;
+}
