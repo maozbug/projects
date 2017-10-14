@@ -21,26 +21,10 @@ export class LoginComponent implements OnInit {
 		
 	}
   submit(){
-//	this.users.getItems('http://127.0.0.1:4200/jsondata/user.json').subscribe(
-//				res=>{
-//					console.log(res[0].username)
-//					console.log(this.username)
-//					if(this.username==res[0].username&&this.password==res[0].password){
-//						sessionStorage.setItem('username', this.username);
-//						sessionStorage.setItem('password', this.password);
-//						this.router.navigateByUrl('workspace');
-//					}else{
-//						alert('用户名或密码错误')
-//					}	
-//				},error=>{
-//					console.log(error);
-//				}	
-//		);
 		//以post方式获取登录是否成功的信息
   	this.users.postUserData('http://192.168.1.3/data/getUser.php',this.username,this.password).subscribe(
   		res=>{
   			console.log(res);
-  			
   			if(res == null){
   				alert('用户名或密码错误,请重新输入!');
   			}else{

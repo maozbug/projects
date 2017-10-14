@@ -24,16 +24,20 @@
 }
 .tables tr th:first-child,.tables tr td:first-child{
 	flex: 1;
+	text-align: center;
 }
 .tables tr th:last-child,.tables tr td:last-child{
 	flex: 2;
+	text-align: center;
 }
-.tables tr:nth-child(2n-1){
+.tables tbody tr:nth-child(2n-1){
 	background: #F7F7F7;
+}
+.tables tr th{
+	text-align: center;
 }
 .tables tr th,.tables tr td{
 	flex: 4;
-	text-align: center;
 }
 .page nav ul{
 	margin: 10px;

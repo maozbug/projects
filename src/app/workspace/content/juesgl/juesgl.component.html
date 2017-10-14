@@ -1,3 +1,47 @@
-<p>
-  juesgl works!
-</p>
+<div class="juesgl">
+	<!--<div class="top">
+		<div class="col-sm-9">
+				<form class="form-inline">
+				  <div class="form-group forms">
+				    <div class="input-group inputs">
+				      <input type="text" class="form-control"  placeholder="用户名,昵称">
+				      <div class="input-group-btn buttn">
+				      	<button class="btn btn-info ">
+				      		<span class="glyphicon glyphicon-search"></span>
+				      		搜索
+				      	</button>
+				      </div>
+				    </div>
+				  </div>
+				</form>
+		</div>
+		<div class="col-sm-3">
+				<button class="btn btn-success newues" routerLink="/workspace/content/uses/add"><span class="glyphicon glyphicon-user"></span><span>创建用户</span></button>
+		</div>
+	</div>-->
+	<div class="tables">
+		<table border="1px solid #C8C8C8" cellspacing="" cellpadding="" class="table table-bordered">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>角色名称</th>
+					<th>创建时间</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of users;let i=index">
+					<td>{{i+1}}</td>
+					<td>{{item.email}}</td>
+					<td>{{item.regtime}}</td>
+					<td>
+						<span><img src="../../../../assets/img/编辑.png" alt="" /></span>
+						<span><img src="../../../../assets/img/锁.png" alt="" /></span>
+						<span><img src="../../../../assets/img/解锁.png" alt="" /></span>
+						<span><img src="../../../../assets/img/删除.png" alt="" /></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

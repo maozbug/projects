@@ -18,15 +18,18 @@ export class EdituseComponent implements OnInit {
 	private username:string;
 	private password:string;
 	private repassword:string;
+	private pasmsg:string;
 	private email:string;
 	private profile:string;
 	private datestime:string;
+	private dis:string="yes";
 
 	constructor(private router:Router,private route: ActivatedRoute, private location: Location,private data: LoadDataService){
 		this.datas=data
 	}
 
   ngOnInit() {
+  	console.log(this.dis)
   	let ids=this.route.params['value']['id']
 		if(ids=="add"){
 			this.showtype=true;
@@ -62,5 +65,16 @@ export class EdituseComponent implements OnInit {
 				this.router.navigateByUrl('workspace/content/yonghgl');
 			}
 		);
+	}
+	repas(){
+		console.log(this.password)
+		console.log(this.repassword)
+		if(this.password!=this.repassword){
+			this.pasmsg="两次密码输入不一致"
+			this.dis="yes"
+		}else{
+			this.pasmsg=""
+			this.dis="no"
+		}
 	}
 }

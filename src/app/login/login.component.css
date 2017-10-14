@@ -1,5 +1,5 @@
-.ng-valid[required], .ng-valid.required  {border-left: 5px solid #42A948; /* green */}
-.ng-invalid:not(form)  {border-left: 5px solid #a94442; /* red */}
+/*.ng-valid[required], .ng-valid.required  {border-left: 5px solid #42A948;}
+.ng-invalid:not(form)  {border-left: 5px solid #a94442;}*/
 #login{
 	background: #282828;
 	width: 100%;
@@ -16,4 +16,14 @@
 }
 .panel-heading{
 	text-align: center;
+}
+.form-horizontal .form-group{
+	margin-bottom: 5px;
+}
+.form-horizontal .msg{
+	padding: 8px;
+	color: coral;
+}
+.form-horizontal .checkbox{
+	padding-top: 0;
 }
