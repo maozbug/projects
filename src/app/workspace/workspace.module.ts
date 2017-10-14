@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { RouterModule } from '@angular/router';
 import { workspaceRoutes } from './workspace.routes';
+import { GuardService } from './guard.service'
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { workspaceRoutes } from './workspace.routes';
     RouterModule,
     RouterModule.forChild(workspaceRoutes)
   ],
-  declarations: [WorkspaceComponent, LeftComponent, HeaderComponent]
+  declarations: [WorkspaceComponent, LeftComponent, HeaderComponent],
+  providers:[GuardService]
 })
 export class WorkspaceModule { }

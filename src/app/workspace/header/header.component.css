@@ -25,7 +25,7 @@
 .imgmore img ,.headimg img,.down img{
 	height: 25px;
 }
-.header .right span{
+.header .right .name span{
 	color: white;
 	font-size: 20px;
 	line-height: 60px;
@@ -42,7 +42,22 @@
 	float: right;
 	margin:0 10px;
 }
-/*.downmenu{
-	position: absolute;
-	top: 60px;
-}*/
+#dropdownMenu1{
+	height: 60px;
+	line-height: 60px;
+}
+.dropdown-menu{
+	padding: 0;
+}
+.dropdown-menu>li{
+	height: 40px;
+}
+.dropdown-menu>li>a {
+	line-height: 40px;
+}
+.dropdown-menu>li>a img{
+	height: 16px;
+}
+.dropdown-menu>li>a>span{
+	color: #282828;
+}

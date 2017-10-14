@@ -1,3 +1,70 @@
-<p>
-  yonghgl works!
-</p>
+<div class="yhtab">
+	<div class="top">
+		<div class="col-sm-9">
+				<form class="form-inline">
+				  <div class="form-group forms">
+				    <div class="input-group inputs">
+				      <input type="text" class="form-control"  placeholder="用户名,昵称">
+				      <div class="input-group-btn buttn">
+				      	<button class="btn btn-info ">
+				      		<span class="glyphicon glyphicon-search"></span>
+				      		搜索
+				      	</button>
+				      </div>
+				    </div>
+				  </div>
+				</form>
+		</div>
+		<div class="col-sm-3">
+				<button class="btn btn-success newues" routerLink="/workspace/content/uses/add"><span class="glyphicon glyphicon-user"></span><span>创建用户</span></button>
+		</div>
+	</div>
+	<div class="tables">
+		<table border="1px solid #C8C8C8" cellspacing="" cellpadding="" class="table table-bordered">
+			<thead>
+				<tr>
+					<th><input type="checkbox" /></th>
+					<th>序号</th>
+					<th>用户名</th>
+					<th>注册时间</th>
+					<th>最后登陆</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of users;let i=index">
+					<td><input type="checkbox" [name]=item.id/></td>
+					<td>{{i+1}}</td>
+					<td>{{item.username}}</td>
+					<td>{{item.regtime}}</td>
+					<td>{{item.logintime}}</td>
+					<td>
+						<button class="btn btn-xs btn-primary" (click)="edit(item.id)" [routerLink]="['/workspace/content/uses',item.id]">编辑</button>
+						<button class="btn btn-xs btn-danger" (click)="del(item.id)">删除</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="page">
+		<nav aria-label="Page navigation">
+		  <ul class="pagination pagination-sm">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+</div>

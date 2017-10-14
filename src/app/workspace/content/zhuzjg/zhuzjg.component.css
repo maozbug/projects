@@ -1,0 +1,20 @@
+li{
+	list-style: none;
+}
+h1{
+	padding: 10px;
+	margin: 0;
+	font-size: 20px;
+	color: #333333;
+}
+.left .tables{
+	width: 55%;
+	height: 300px;
+	padding: 2%;
+	border: 1px solid #D7D7D7;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.left .listIn{
+	margin-left: 10px;
+}

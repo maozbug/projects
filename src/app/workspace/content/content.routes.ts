@@ -9,6 +9,7 @@ import { WenzglComponent } from './wenzgl/wenzgl.component';
 import { PinglglComponent } from './pinglgl/pinglgl.component';
 import { XitztComponent } from './xitzt/xitzt.component';
 import { BaidumapComponent } from './baidumap/baidumap.component';
+import { EdituseComponent } from './edituse/edituse.component';
 
 export const contentRoutes=[
 	{
@@ -51,6 +52,10 @@ export const contentRoutes=[
 			{
 				path:'baidumap',
 				component:BaidumapComponent
+			},
+			{
+				path:'uses/:id',
+				component:EdituseComponent
 			}
 		]
 	}

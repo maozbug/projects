@@ -1,8 +1,4 @@
 .header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
 	background:#282828 ;
 }
 .left-nav{
@@ -20,5 +16,5 @@
 	right: 0;
 	left: 20%;
 	bottom: 0;
-	background:#FFFFFF ;
+	background: #F7F7F7;
 }
