@@ -12,13 +12,13 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">用户名:</label>
 	    <div class="col-sm-7">
-	      	<input type="text" class="form-control" [value]="username" name="username" id="" [(ngModel)]="username" #user="ngModel" required="required"  minlength="5" placeholder="用户名">
+	      	<input type="text" class="form-control" [value]="username" name="username" id="" [(ngModel)]="username" #user="ngModel" required="required"  minlength="3" placeholder="用户名">
 	    </div>
 	    <div class="col-sm-3 msg">
 	    	<div *ngIf="user.pristine||user.errors==null">&nbsp;</div>
 			<div *ngIf="user.invalid && user.dirty">
 				<div *ngIf="user.errors.required">用户名不能为空</div>
-				<div *ngIf="user.errors.minlength">用户名格式不正确或长度<5</div>	
+				<div *ngIf="user.errors.minlength">用户名格式不正确或长度<3</div>	
 				<!--<div *ngIf="user.errors.pattern">用户名必须为数字字母下划线</div>	-->
 			</div>
 	    </div>

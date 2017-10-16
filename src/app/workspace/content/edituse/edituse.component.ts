@@ -35,7 +35,7 @@ export class EdituseComponent implements OnInit {
 			this.showtype=true;
 		}else{
 			this.showtype=false;
-			this.datas.getItems('http://192.168.1.3/data/getNormalUserSingle.php?id='+ids).subscribe(
+			this.datas.getItems('http://192.168.1.6/data/getNormalUserSingle.php?id='+ids).subscribe(
 				res=>{
 					console.log(res);
 					this.id=res.id
@@ -50,19 +50,23 @@ export class EdituseComponent implements OnInit {
 		}
   }
 	ctrlsAdd(){
-		this.datas.postUserData('http://192.168.1.3/data/addNormalUser.php',this.username,this.password,this.email,this.profile).subscribe(
+		this.datas.postUserData('http://192.168.1.6/data/addNormalUser.php',this.username,this.password,this.email,this.profile).subscribe(
 			res=>{
-				alert('添加成功')
-				this.router.navigateByUrl('workspace/content/yonghgl');
+				if(res.result>0){
+					alert('添加成功')
+					this.router.navigateByUrl('workspace/content/yonghgl');
+				}
 			}
 		);
 	}
 	ctrlsEdit(){
-		this.datas.postUseData('http://192.168.1.3/data/updateNormalUser.php',this.id,this.username,this.password,this.email,this.profile).subscribe(
+		this.datas.postUseData('http://192.168.1.6/data/updateNormalUser.php',this.id,this.username,this.password,this.email,this.profile).subscribe(
 			res=>{
 				console.log(res)
-				alert('修改成功')
-				this.router.navigateByUrl('workspace/content/yonghgl');
+				if(res.result==1){
+					alert('修改成功')
+					this.router.navigateByUrl('workspace/content/yonghgl');
+				}
 			}
 		);
 	}

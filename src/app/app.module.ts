@@ -7,7 +7,7 @@ import {HttpModule,Http} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { LoadDataService } from './load-data.service'
+import { LoadDataService } from './load-data.service';
 
 @NgModule({
   declarations: [

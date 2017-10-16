@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {DataTableModule,SharedModule} from 'primeng/primeng';
 
 import { ContentComponent } from './content.component';
 import {RouterModule} from '@angular/router';
@@ -19,7 +20,9 @@ import { EdituseComponent } from './edituse/edituse.component';
     CommonModule,
     RouterModule,
     RouterModule.forChild(contentRoutes),
-    FormsModule
+    FormsModule,
+    DataTableModule,
+    SharedModule
   ],
   declarations: [ContentComponent, ZhuzjgComponent, YonghglComponent, JuesglComponent, QuanxglComponent, WenzglComponent, PinglglComponent, XitztComponent, BaidumapComponent, EdituseComponent]
 })

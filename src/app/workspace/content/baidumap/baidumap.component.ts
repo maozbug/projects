@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+//import {OfflineOptions, ControlAnchor, NavigationControlType} from 'angular2-baidu-map';
 
 @Component({
   selector: 'app-baidumap',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BaidumapComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
-
+ 		constructor(){
+ 			
+ 		}
+    ngOnInit() {
+        
+		}
 }

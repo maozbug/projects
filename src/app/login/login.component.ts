@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 	}
   submit(){
 		//以post方式获取登录是否成功的信息
-  	this.users.postUserData('http://192.168.1.3/data/getUser.php',this.username,this.password).subscribe(
+  	this.users.postUserData('http://192.168.1.6/data/getUser.php',this.username,this.password).subscribe(
   		res=>{
   			console.log(res);
   			if(res == null){

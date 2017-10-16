@@ -1,38 +1,61 @@
 <div class="leftCon">
-		<div id="accordion">
-				<div>
-						<div class="headerToggle">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-									<div class="stnav">
-										<div class="lef"><img src="../../../assets/img/home-big.png"/></div>
-										<div class="cen">权限管理</div>
-										<div class="rig"><img src="../../../assets/img/down.png"/></div>
-									</div>
-								</a>
+	<div id="accordion" *ngFor="let item of navs">
+		<div>
+			<div class="headerToggle">
+				<a data-toggle="collapse" data-parent="#accordion" [href]="item.href">
+					<div class="stnav">
+						<div><img [src]="item.icon"/></div>
+						<div class="cen">{{item.name}}</div>
+						<div class="rig"><img src="../../../assets/img/down.png"/></div>
+					</div>
+				</a>
+			</div>
+			<div [id]="item.ids" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<ul>
+							<li [routerLink]="nav.route" *ngFor="let nav of item.children">
+								<span><img [src]="nav.icon"/></span>
+								<span>{{nav.name}}</span>
+							</li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+		<!--<div id="accordion">
+			<div>
+				<div class="headerToggle">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+						<div class="stnav">
+							<div class="lef"><img src="../../../assets/img/home-big.png"/></div>
+							<div class="cen">权限管理</div>
+							<div class="rig"><img src="../../../assets/img/down.png"/></div>
 						</div>
-						<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul>
-										<li routerLink="/workspace/content/zhuzjg">
-											<span><img src="../../../assets/img/man.png"/></span>
-											<span>组织架构</span>
-										</li>
-										<li routerLink="/workspace/content/yonghgl">
-											<span><img src="../../../assets/img/chongzi.png"/></span>
-											<span>用户管理</span>
-										</li>
-										<li routerLink="/workspace/content/juesgl">
-											<span><img src="../../../assets/img/car.png"/></span>
-											<span>角色管理</span>
-										</li>
-										<li routerLink="/workspace/content/quanxgl">
-											<span><img src="../../../assets/img/plane.png"/></span>
-											<span>权限管理</span>
-										</li>
-									</ul>
-								</div>
+					</a>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul>
+								<li routerLink="/workspace/content/zhuzjg">
+									<span><img src="../../../assets/img/man.png"/></span>
+									<span>组织架构</span>
+								</li>
+								<li routerLink="/workspace/content/yonghgl">
+									<span><img src="../../../assets/img/chongzi.png"/></span>
+									<span>用户管理</span>
+								</li>
+								<li routerLink="/workspace/content/juesgl">
+									<span><img src="../../../assets/img/car.png"/></span>
+									<span>角色管理</span>
+								</li>
+								<li routerLink="/workspace/content/quanxgl">
+									<span><img src="../../../assets/img/plane.png"/></span>
+									<span>权限管理</span>
+								</li>
+							</ul>
 						</div>
 				</div>
+			</div>
 		</div>
 		<div id="accordion1">
 				<div>
@@ -87,6 +110,6 @@
 								</div>
 						</div>
 				</div>
-		</div>
+		</div>-->
 </div>
 

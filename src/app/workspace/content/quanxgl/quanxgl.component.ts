@@ -19,7 +19,7 @@ export class QuanxglComponent implements OnInit {
 	}
 
   ngOnInit() {
-  	this.datas.getItems('http://192.168.1.3/data/getNormalUser.php').subscribe(
+  	this.datas.getItems('http://192.168.1.6/data/getNormalUser.php').subscribe(
 				res=>{
 					this.users=res
 					console.log(this.users)

@@ -18,7 +18,7 @@ export class YonghglComponent implements OnInit {
 	}
 
   ngOnInit() {
-  	this.datas.getItems('http://192.168.1.3/data/getNormalUser.php').subscribe(
+  	this.datas.getItems('http://192.168.1.6/data/getNormalUser.php').subscribe(
 				res=>{
 					this.users=res
 					console.log(this.users)
@@ -28,7 +28,7 @@ export class YonghglComponent implements OnInit {
 		);
   }
 	del(id){
-  	this.datas.getItems('http://192.168.1.3/data/delNormalUser.php?id='+id).subscribe(
+  	this.datas.getItems('http://192.168.1.6/data/delNormalUser.php?id='+id).subscribe(
 				res=>{
 					console.log(res);
 					alert('删除成功')
@@ -36,7 +36,7 @@ export class YonghglComponent implements OnInit {
 					console.log(error);
 				}	
 		);
-  	this.datas.getItems('http://192.168.1.3/data/getNormalUser.php').subscribe(
+  	this.datas.getItems('http://192.168.1.6/data/getNormalUser.php').subscribe(
 				res=>{
 					this.users=res
 					console.log(this.users)
