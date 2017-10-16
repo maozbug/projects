@@ -26,13 +26,13 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">常用邮箱:</label>
 	    <div class="col-sm-7">
-	      <input type="email" class="form-control"  [value]="email"  name="email" id="" [(ngModel)]="email" #emails="ngModel" required="required" placeholder="常用邮箱">
+	      <input type="email" class="form-control"  [value]="email"  name="email" id="" [(ngModel)]="email" #emails="ngModel" required="required" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" placeholder="常用邮箱">
 	    </div>
 	    <div class="col-sm-3 msg">
 	    	<div *ngIf="emails.pristine||emails.errors==null">&nbsp;</div>
 			<div *ngIf="emails.invalid && emails.dirty">
 				<div *ngIf="emails.errors.required">邮箱不能为空</div>
-<!--				<div *ngIf="emails.errors.pattern">邮箱格式不正确</div>-->
+				<div *ngIf="emails.errors.pattern">邮箱格式不正确</div>
 			</div>
 	    </div>
 	  </div>
