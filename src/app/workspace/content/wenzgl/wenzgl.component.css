@@ -1,0 +1,44 @@
+.wenzgl{
+	height: 500px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.forms,.inputs{
+	width: 100%;
+}
+.top{
+	padding-top: 10px;
+}
+.newues{
+	float: right;
+}
+.newues span{
+	margin:0 2px;
+}
+.tables{
+	padding: 10px;
+	margin-top: 30px;
+}
+.tables tr{
+	display: flex;
+}
+.tables tr th:first-child,.tables tr td:first-child{
+	flex: 1;
+	text-align: center;
+}
+.tables tr th:last-child,.tables tr td:last-child{
+	flex: 2;
+	text-align: center;
+}
+.tables tr th:nth-child(2),.tables tr td:nth-child(2){
+	flex: 8;
+}
+.tables tbody tr:nth-child(2n-1){
+	background: #F7F7F7;
+}
+.tables tr th{
+	text-align: center;
+}
+.tables tr th,.tables tr td{
+	flex: 4;
+}

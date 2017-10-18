@@ -22,24 +22,24 @@ export class LoginComponent implements OnInit {
 	}
   submit(){
 		//以post方式获取登录是否成功的信息
-  	this.users.postUserData('http://192.168.1.6/data/getUser.php',this.username,this.password).subscribe(
-  		res=>{
-  			console.log(res);
-  			if(res == null){
-  				alert('用户名或密码错误,请重新输入!');
-  			}else{
-  				if(res.username == this.username &&res.password == this.password){
-						alert('登录成功');
-						//将登录信息保存在sessionStorage中
-						sessionStorage.setItem('username',res.username);
-						sessionStorage.setItem('password',res.password);
-						//将路由跳转到  workspace页
-						this.router.navigateByUrl('workspace');
-					}
-  				
-  			}
-  		}
-  	);
+		this.users.postUserData('http://192.168.1.7/data/getUser.php',this.username,this.password).subscribe(
+			res=>{
+				console.log(res);
+				if(res == null){
+					alert('用户名或密码错误,请重新输入!');
+				}else{
+					if(res.username == this.username &&res.password == this.password){
+							alert('登录成功');
+							//将登录信息保存在sessionStorage中
+							sessionStorage.setItem('username',res.username);
+							sessionStorage.setItem('password',res.password);
+							//将路由跳转到  workspace页
+							this.router.navigateByUrl('workspace');
+						}
+					
+				}
+			}
+		);
   }
 
 }

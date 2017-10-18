@@ -4,12 +4,13 @@ import { Http, Response, Headers, RequestOptions,URLSearchParams } from '@angula
 import { Router } from '@angular/router';
 import {ActivatedRoute,Params} from '@angular/router';
 import {Location} from '@angular/common';
-
+import {donghua} from '../donghua';
 
 @Component({
   selector: 'app-edituse',
   templateUrl: './edituse.component.html',
-  styleUrls: ['./edituse.component.css']
+  styleUrls: ['./edituse.component.css'],
+  animations:[donghua]
 })
 export class EdituseComponent implements OnInit {
 	private showtype:boolean;
@@ -35,9 +36,9 @@ export class EdituseComponent implements OnInit {
 			this.showtype=true;
 		}else{
 			this.showtype=false;
-			this.datas.getItems('http://192.168.1.6/data/getNormalUserSingle.php?id='+ids).subscribe(
+			this.datas.getItems('http://192.168.1.7/data/getNormalUserSingle.php?id='+ids).subscribe(
 				res=>{
-					console.log(res);
+//					console.log(res);
 					this.id=res.id
 					this.username=res.username;
 					this.email=res.email;
@@ -50,7 +51,7 @@ export class EdituseComponent implements OnInit {
 		}
   }
 	ctrlsAdd(){
-		this.datas.postUserData('http://192.168.1.6/data/addNormalUser.php',this.username,this.password,this.email,this.profile).subscribe(
+		this.datas.postUserData('http://192.168.1.7/data/addNormalUser.php',this.username,this.password,this.email,this.profile).subscribe(
 			res=>{
 				if(res.result>0){
 					alert('添加成功')
@@ -60,7 +61,7 @@ export class EdituseComponent implements OnInit {
 		);
 	}
 	ctrlsEdit(){
-		this.datas.postUseData('http://192.168.1.6/data/updateNormalUser.php',this.id,this.username,this.password,this.email,this.profile).subscribe(
+		this.datas.postUseData('http://192.168.1.7/data/updateNormalUser.php',this.id,this.username,this.password,this.email,this.profile).subscribe(
 			res=>{
 				console.log(res)
 				if(res.result==1){

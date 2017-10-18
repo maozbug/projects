@@ -1,0 +1,95 @@
+/*.wenzgl{
+	height: 500px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.forms,.inputs{
+	width: 100%;
+}
+.top{
+	padding-top: 10px;
+}
+.newues{
+	float: right;
+}
+.newues span{
+	margin:0 2px;
+}
+.tables{
+	padding: 10px;
+	margin-top: 30px;
+}
+
+.tables tbody tr:nth-child(2n-1){
+	background: #F7F7F7;
+}
+.tables tr th{
+	text-align: center;
+}*/
+
+.header{
+	border-bottom: 1px solid #414141;
+	height: 60px;
+	overflow: hidden;
+}
+.header .left{
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+}
+.header .left span{
+	font-size: 26px;
+	line-height: 60px;
+	padding: 0 20px;
+}
+.imgmore, .headimg,.down{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+.imgmore img ,.headimg img,.down img{
+	height: 25px;
+}
+.header .right .name span{
+	font-size: 20px;
+	line-height: 60px;
+	padding: 0 20px;
+}
+.header .right{
+	height: 60px;
+	/*overflow: hidden;*/
+}
+.header .right .rightcon{
+	display: flex;
+	flex-direction: row;
+	float: right;
+	margin:0 10px;
+}
+#dropdownMenu1{
+	height: 60px;
+	line-height: 60px;
+}
+.down-menu>li{
+	height: 40px;
+}
+.down-menu>li>a {
+	line-height: 40px;
+}
+.down-menu>li>a img{
+	height: 16px;
+}
+.down-menu>li>a>span{
+	color: #282828;
+}
+/*ul{
+	position: absolute;
+	top: 60px;
+}*/
+.aaaa{
+	position: fixed;
+	top: 60px;
+	overflow: hidden;
+	z-index: -2;
+}

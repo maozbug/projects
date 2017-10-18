@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {DataTableModule,SharedModule} from 'primeng/primeng';
-import {BaiduMapModule} from "angular2-baidu-map";
-//import { ChartsModule } from 'ng2-charts/ng2-charts';
+import {DataTableModule,SharedModule,TreeModule,TreeNode} from 'primeng/primeng';
+//import {BaiduMapModule} from "angular2-baidu-map";
+import { ChartsModule } from 'ng2-charts';
 
 import { ContentComponent } from './content.component';
 import {RouterModule} from '@angular/router';
@@ -17,6 +17,7 @@ import { PinglglComponent } from './pinglgl/pinglgl.component';
 import { XitztComponent } from './xitzt/xitzt.component';
 import { BaidumapComponent } from './baidumap/baidumap.component';
 import { EdituseComponent } from './edituse/edituse.component';
+import { AchartsDirective } from './xitzt/acharts.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -25,9 +26,10 @@ import { EdituseComponent } from './edituse/edituse.component';
     FormsModule,
     DataTableModule,
     SharedModule,
-    BaiduMapModule,
-//  ChartsModule
+//  BaiduMapModule,
+    ChartsModule,
+    TreeModule
   ],
-  declarations: [ContentComponent, ZhuzjgComponent, YonghglComponent, JuesglComponent, QuanxglComponent, WenzglComponent, PinglglComponent, XitztComponent, BaidumapComponent, EdituseComponent]
+  declarations: [ContentComponent, ZhuzjgComponent, YonghglComponent, JuesglComponent, QuanxglComponent, WenzglComponent, PinglglComponent, XitztComponent, BaidumapComponent, EdituseComponent, AchartsDirective]
 })
 export class ContentModule { }

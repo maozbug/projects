@@ -1,4 +1,4 @@
-<h1>
+<!--<h1>
 	组织架构
 </h1>
 <div class="left col-sm-6">
@@ -61,4 +61,29 @@
 		  <button type="submit" class="btn btn-success">新建</button>
 		  <button type="submit" class="btn btn-danger">编辑</button>
 		</form>
+</div>-->
+<div [@donghua]="donghua">
+	<h1>
+		组织架构
+	</h1>
+	<div class="row zhuzjg">
+		<div class="left col-sm-6">
+			<p-tree [value]="trees" selectionMode="single" [(selection)]="selectedFile"(onNodeSelect)="nodeSelect($event)"></p-tree>
+		</div>
+		<div class="right col-sm-6">
+			<form >
+				<div class="form-group">
+					<label>名称</label>
+					<input  type="text" class="form-control" name="names" pInputText [(ngModel)]="names" />
+				</div>
+				<div class="form-group">
+					<label>代码</label>
+					<input  type="text" class="form-control" name="codes" pInputText [(ngModel)]="codes"/>
+				</div>
+				<button type="submit" class="btn btn-primary" (click)="edit()">编辑</button>
+			    <button type="submit" class="btn btn-success" (click)="add()">新建</button>
+			    <button type="submit" class="btn btn-danger" (click)="del()">删除</button>
+			</form>
+		</div>
+	</div>
 </div>

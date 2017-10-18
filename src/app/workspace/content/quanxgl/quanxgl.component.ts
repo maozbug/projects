@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { LoadDataService } from '../../../load-data.service'
 import { Http, Response, Headers, RequestOptions,URLSearchParams } from '@angular/http';
 import { Router } from '@angular/router';
-
+import {donghua} from '../donghua';
 @Component({
   selector: 'app-quanxgl',
   templateUrl: './quanxgl.component.html',
-  styleUrls: ['./quanxgl.component.css']
+  styleUrls: ['./quanxgl.component.css'],
+  animations:[donghua]
 })
 export class QuanxglComponent implements OnInit {
 
@@ -19,7 +20,7 @@ export class QuanxglComponent implements OnInit {
 	}
 
   ngOnInit() {
-  	this.datas.getItems('http://192.168.1.6/data/getNormalUser.php').subscribe(
+  	this.datas.getItems('http://192.168.1.7/data/getNormalUser.php').subscribe(
 				res=>{
 					this.users=res
 					console.log(this.users)

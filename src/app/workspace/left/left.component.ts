@@ -18,7 +18,7 @@ export class LeftComponent implements OnInit {
 		this.datas.getItems('http://127.0.0.1:4200/jsondata/left-nav-mock.json').subscribe(
 				res=>{
 					this.navs=res
-					console.log(res)
+//					console.log(res)
 				},error=>{
 					console.log(error);
 				}	

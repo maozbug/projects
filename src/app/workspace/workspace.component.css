@@ -1,5 +1,10 @@
 .header{
 	background:#282828 ;
+	/*position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;*/
 }
 .left-nav{
 	position: fixed;

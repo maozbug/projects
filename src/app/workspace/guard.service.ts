@@ -9,7 +9,7 @@ export class GuardService {
   constructor(private router:Router) { }
   //定义守卫的内容
   canActivate():boolean{
-  	console.log('路由守卫到这里');
+//	console.log('路由守卫到这里');
   	this.username=sessionStorage.getItem('username');
 		this.password=sessionStorage.getItem('password');
 		if(this.username&&this.password){
